@@ -1,0 +1,17 @@
+# Web framework
+fastapi
+
+# ASGI server
+uvicorn
+
+# Database ORM
+sqlalchemy
+
+# Data validation and settings management
+pydantic
+
+# MySQL driver
+mysqlclient
+
+# Environment variable management (optional)
+dotenv

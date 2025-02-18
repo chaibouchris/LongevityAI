@@ -1,0 +1,98 @@
+**Health Score Calculation – Explanation**
+
+The health score is calculated based on multiple health metrics, including blood tests, physical activity, sleep duration, BMI, smoking habits, and stability. Each category has a defined scoring system to ensure a fair and accurate health assessment.
+
+---
+
+### 1. Blood Test Scores (Maximum: 50 points)
+Each blood test parameter is assessed based on age and gender, using predefined scoring ranges.
+
+- **Glucose**
+- **Hemoglobin**
+- **Cholesterol**
+- **Creatinine**
+- **White Blood Cells (WBC)**
+
+Each parameter contributes between **0 to 10 points**, based on the predefined health ranges.
+
+---
+
+### 2. Physical Activity Score (Maximum: 15 points)
+The score is determined by step count and adjusted based on the user's age:
+
+- **10,000+ steps** → **15 points**
+- **7,500 - 9,999 steps** → **10 points**
+- **5,000 - 7,499 steps** → **5 points**
+- **Less than 5,000 steps** → **0 points**
+
+---
+
+### 3. Sleep Duration Score (Maximum: 10 points)
+The score is determined based on sleep duration and adjusted by age:
+
+- **7 - 9 hours** → **10 points**
+- **5 - 6.9 hours** → **5 points**
+- **Less than 5 hours** → **0 points**
+
+---
+
+### 4. BMI Score (Maximum: 20 points)
+Calculated using **BMI = weight (kg) / height² (m²)**:
+
+- **BMI < 16 (Severely Underweight)** → **0 points**
+- **BMI 16 - 16.9 (Moderately Underweight)** → **5 points**
+- **BMI 17 - 18.4 (Mildly Underweight)** → **10 points**
+- **BMI 18.5 - 24.9 (Healthy range)** → **20 points**
+- **BMI 25 - 29.9 (Overweight)** → **15 points**
+- **BMI 30 - 34.9 (Obese Class I)** → **10 points**
+- **BMI 35 - 39.9 (Obese Class II)** → **5 points**
+- **BMI ≥ 40 (Severely Obese)** → **0 points**
+
+---
+
+### 5. Smoking Penalty (Penalty: -10 to 0 points)
+Smoking only reduces the score, not adds to it:
+
+- **Non-Smoker** → **0 points (No penalty)**
+- **Occasional Smoker** → **-5 points**
+- **Regular Smoker** → **-10 points**
+
+---
+
+### 6. Stability Bonus (Maximum: 5 points)
+A stability bonus is awarded if no health metric received a **0 score**:
+
+- **No failed metrics** → **5 points**
+- **One or more failed metrics** → **0 points**
+
+---
+
+### 7. Comparison to System Average (Maximum: 10 points)
+A user is compared to the system-wide average health score:
+
+- **Above 90% of system average** → **10 points**
+- **Below 90% of system average** → **0 points**
+
+---
+
+### 🏆 Final Health Score Calculation
+
+| Category | Maximum Score |
+|----------|--------------|
+| Blood Test Results | 50 |
+| Physical Activity | 15 |
+| Sleep Duration | 10 |
+| BMI Score | 20 |
+| Smoking Penalty | (-10) to 0 |
+| Stability Bonus | 5 |
+| Comparison to Average | 10 |
+| **Total Possible Score** | **100** |
+
+---
+
+💡 **Final Notes**
+- **85+ points** → Excellent health
+- **50 - 84 points** → Moderate health
+- **Below 50 points** → Health intervention recommended
+- The system dynamically updates the **comparison to average** based on real-time user data.
+
